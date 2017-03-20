@@ -1,3 +1,5 @@
+I need a sensor node that sits on a CAN bus. This looks like a good place to start.
+
 # CANtact Hardware
 
 This repository contains the hardware design files for the CANtact tool. They 
