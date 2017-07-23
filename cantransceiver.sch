@@ -1,0 +1,167 @@
+EESchema Schematic File Version 2
+LIBS:cantact-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:BLDC_4-cache
+LIBS:small-bldc-hw-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L GND #PWR?
+U 1 1 58D48959
+P 4000 3750
+F 0 "#PWR?" H 4000 3750 30  0001 C CNN
+F 1 "GND" H 4000 3680 30  0001 C CNN
+F 2 "" H 4000 3750 60  0000 C CNN
+F 3 "" H 4000 3750 60  0000 C CNN
+	1    4000 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58D4895F
+P 4550 3750
+F 0 "#PWR?" H 4550 3750 30  0001 C CNN
+F 1 "GND" H 4550 3680 30  0001 C CNN
+F 2 "" H 4550 3750 60  0000 C CNN
+F 3 "" H 4550 3750 60  0000 C CNN
+	1    4550 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58D48965
+P 4800 2750
+F 0 "C?" V 4850 2550 40  0000 L CNN
+F 1 "0.1uF" V 4900 2550 40  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4838 2600 30  0001 C CNN
+F 3 "" H 4800 2750 60  0000 C CNN
+	1    4800 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58D4896C
+P 5100 2900
+F 0 "#PWR?" H 5100 2900 30  0001 C CNN
+F 1 "GND" H 5100 2830 30  0001 C CNN
+F 2 "" H 5100 2900 60  0000 C CNN
+F 3 "" H 5100 2900 60  0000 C CNN
+	1    5100 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 58D48972
+P 4550 2700
+F 0 "#PWR?" H 4550 2790 20  0001 C CNN
+F 1 "+5V" H 4550 2790 30  0000 C CNN
+F 2 "" H 4550 2700 60  0000 C CNN
+F 3 "" H 4550 2700 60  0000 C CNN
+	1    4550 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCP2562-E/SN U?
+U 1 1 58D48980
+P 4550 3250
+F 0 "U?" H 4150 3600 50  0000 L CNN
+F 1 "MCP2562-E/SN" H 4650 3600 50  0000 L CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 4550 2750 50  0001 C CIN
+F 3 "" H 4550 3250 50  0000 C CNN
+	1    4550 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 58D48987
+P 3200 3350
+F 0 "#PWR?" H 3200 3200 50  0001 C CNN
+F 1 "+3.3V" H 3200 3490 50  0000 C CNN
+F 2 "" H 3200 3350 50  0000 C CNN
+F 3 "" H 3200 3350 50  0000 C CNN
+	1    3200 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58D4898D
+P 3650 3550
+F 0 "C?" H 3675 3650 50  0000 L CNN
+F 1 "0.1uF" H 3675 3450 50  0000 L CNN
+F 2 "" H 3688 3400 50  0000 C CNN
+F 3 "" H 3650 3550 50  0000 C CNN
+	1    3650 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58D48994
+P 3650 3800
+F 0 "#PWR?" H 3650 3550 50  0001 C CNN
+F 1 "GND" H 3650 3650 50  0000 C CNN
+F 2 "" H 3650 3800 50  0000 C CNN
+F 3 "" H 3650 3800 50  0000 C CNN
+	1    3650 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 3050 4050 3050
+Wire Wire Line
+	3750 3150 4050 3150
+Wire Wire Line
+	4550 3650 4550 3750
+Wire Wire Line
+	4550 2700 4550 2850
+Wire Wire Line
+	4550 2750 4650 2750
+Wire Wire Line
+	4950 2750 5100 2750
+Wire Wire Line
+	5100 2750 5100 2900
+Connection ~ 4550 2750
+Wire Wire Line
+	4050 3450 4000 3450
+Wire Wire Line
+	4000 3450 4000 3750
+Wire Wire Line
+	3200 3350 4050 3350
+Wire Wire Line
+	3650 3400 3650 3350
+Connection ~ 3650 3350
+Wire Wire Line
+	3650 3800 3650 3700
+Wire Wire Line
+	5300 3150 5050 3150
+Wire Wire Line
+	5300 3350 5050 3350
+Text HLabel 5300 3150 2    60   Output ~ 0
+CANH
+Text HLabel 5300 3350 2    60   Output ~ 0
+CANL
+Text HLabel 3750 3150 0    60   Output ~ 0
+CAN_RX
+Text HLabel 3750 3050 0    60   Input ~ 0
+CAN_TX
+$EndSCHEMATC
