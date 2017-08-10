@@ -1,4 +1,4 @@
-update=Sat 01 Jul 2017 02:37:53 PM CDT
+update=Sat 05 Aug 2017 01:33:11 PM CDT
 version=1
 last_client=kicad
 [cvpcb]
@@ -44,3 +44,13 @@ LibName10=adc-dac
 LibName11=memory
 LibName12=xilinx
 LibName13=/home/h/projects/bldc-hardware/design/BLDC_4-cache
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
