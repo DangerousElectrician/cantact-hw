@@ -78,6 +78,21 @@
     )
     (attach off)
   )
+  (padstack "Via[0-3]_1270:685.799_um"
+    (shape
+      (circle F.Cu 1270.0 0.0 0.0)
+    )
+    (shape
+      (circle In1.Cu 1270.0 0.0 0.0)
+    )
+    (shape
+      (circle In2.Cu 1270.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 1270.0 0.0 0.0)
+    )
+    (attach off)
+  )
   (padstack "Via[0-3]_685.8:508_um"
     (shape
       (circle F.Cu 685.8 0.0 0.0)
@@ -92,6 +107,18 @@
       (circle B.Cu 685.8 0.0 0.0)
     )
     (attach off)
+  )
+  (via 
+    "Via[0-3]_1270:685.799_um" "Via[0-3]_1270:685.799_um" default
+  )
+  (via 
+    "Via[0-3]_1270:685.799_um-kicad_default" "Via[0-3]_1270:685.799_um" "kicad_default"
+  )
+  (via 
+    "Via[0-3]_1270:685.799_um-bigpower" "Via[0-3]_1270:685.799_um" bigpower
+  )
+  (via 
+    "Via[0-3]_1270:685.799_um-smallpower" "Via[0-3]_1270:685.799_um" smallpower
   )
   (via 
     "Via[0-3]_685.8:330.2_um" "Via[0-3]_685.8:330.2_um" default
@@ -152,8 +179,8 @@
     )
   )
   (class "kicad_default"
-    "Net-(C1-Pad1)" "Net-(C5-Pad1)" "/IN_VOLTAGE" "/TEMP_MOTOR" "Net-(C16-Pad1)" "Net-(C17-Pad1)" "Net-(C17-Pad2)" "Net-(C18-Pad1)"
-    "Net-(C20-Pad1)" "Net-(C20-Pad2)" "Net-(C22-Pad2)" "/power/PHASE_A" "Net-(C26-Pad2)" "/power/PHASE_B" "Net-(C27-Pad2)" "/power/PHASE_C"
+    "/power/PHASE_A" "/power/PHASE_B" "/power/PHASE_C" "Net-(C1-Pad1)" "Net-(C5-Pad1)" "/IN_VOLTAGE" "/TEMP_MOTOR" "Net-(C16-Pad1)"
+    "Net-(C17-Pad1)" "Net-(C17-Pad2)" "Net-(C18-Pad1)" "Net-(C20-Pad1)" "Net-(C20-Pad2)" "Net-(C22-Pad2)" "Net-(C26-Pad2)" "Net-(C27-Pad2)"
     "Net-(C28-Pad2)" "Net-(C29-Pad1)" "/power/SN_A" "/power/SP_A" "/power/SN_C" "/power/SP_C" "Net-(D1-Pad2)" /PB0
     "Net-(D2-Pad2)" /PA7 "/ADC_IN9" /PB12 "/UART_TX" "/UART_RX" "/USB_DM" "/USB_DP"
     /CANL /CANH "Net-(J7-Pad1)" /SDA /SCL "Net-(JP1-Pad2)" /SWCLK /SWDIO
@@ -173,6 +200,7 @@
     )
   )
   (class bigpower
+    GNDPWR
     (clearance_class bigpower)
     (via_rule bigpower)
     (rule
@@ -183,7 +211,7 @@
     )
   )
   (class smallpower
-    GND +3V3 +5V "DC_SUPPLY" "Net-(C29-Pad2)" GNDPWR
+    GND "DC_SUPPLY" +3V3 +5V "Net-(C29-Pad2)"
     (clearance_class smallpower)
     (via_rule smallpower)
     (rule
